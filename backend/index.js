@@ -5,7 +5,7 @@ const seedDB = require('./seed');
 const quoteRoutes = require('./api/quoteRoute');
 const cors = require('cors');
 
-mongoose.connect('mongodb://127.0.0.1:27017/QuoteDB')
+mongoose.connect('mongodb+srv://mprerna624:2jtyxqtkcLyARUt6@cluster0.idqcnbg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 .then(() => {console.log('Database connected successfully!!')})
 .catch((err) => {console.log(err)});
 
@@ -18,7 +18,7 @@ app.use(cors({origin: ['http://localhost:3000']}));
 app.use(quoteRoutes);
 
 app.get('/hello', (req,res) => {
-    res.status(200).json({msg: "Hello froom Quotes App"})
+    res.status(200).json({msg: "Hello from Quotes App"})
 })
 
 // seedDB();
