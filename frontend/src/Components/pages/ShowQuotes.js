@@ -14,7 +14,8 @@ const ShowQuotes = () => {
     }); 
 
     async function fetchQuote() {
-        let res = await axios.get(`http://localhost:8080/quotes/${params.id}`);
+        // let res = await axios.get(`http://localhost:8080/quotes/${params.id}`);
+        let res = await axios.get(`https://quotes-app-quoe.onrender.com/quotes/${params.id}`);
         let {author, text} = res.data;
         setQuote({author, text})
     }

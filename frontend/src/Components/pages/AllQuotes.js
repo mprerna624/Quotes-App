@@ -7,8 +7,9 @@ const AllQuotes = () => {
     let [quotes, setQuotes] = useState([]);
     
     async function getQuotes() {
-        let res = await axios.get('http://localhost:8080/allquotes');
-        console.log(res)
+        // let res = await axios.get('http://localhost:8080/allquotes');
+        let res = await axios.get('https://quotes-app-quoe.onrender.com/allquotes')
+        // console.log(res)
         setQuotes(res.data)
     }
 
