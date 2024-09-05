@@ -8,7 +8,8 @@ const AllQuotes = () => {
     
     async function getQuotes() {
         // let res = await axios.get('http://localhost:8080/allquotes');
-        let res = await axios.get('https://quotes-app-quoe.onrender.com/allquotes')
+        // let res = await axios.get('https://quotes-app-quoe.onrender.com/allquotes')
+        let res = await axios.get('https://quotes-app-rho-ashy.vercel.app/allquotes')
         // console.log(res)
         setQuotes(res.data)
     }
